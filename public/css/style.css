@@ -270,8 +270,14 @@ section { padding: 60px 80px; }
   background: #fff;
 }
 
-.menu .box-container .box:hover > *{
+/* .menu .box-container .box:hover > *{
   background: var(--black);
+} */
+
+.menu .box-container .box .btn:hover,
+.products .box-container .box .btn:hover {
+  background: var(--accent-dark);
+  color: #fff;
 }
 
 .products .box-container{
