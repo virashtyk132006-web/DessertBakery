@@ -83,7 +83,7 @@ paths:
 
 components:
   schemas:
-     1. DTO для відповіді - 
+    # 1. DTO для відповіді - 
     DessertResponse:
       type: object
       required:
@@ -108,7 +108,7 @@ components:
           format: uri
           example: "https://dessertbakery.com/images/tiramisu.jpg"
 
-     2. DTO для створення 
+    # 2. DTO для створення 
     DessertCreate:
       type: object
       required:
@@ -129,11 +129,11 @@ components:
           format: uri
           example: "https://dessertbakery.com/images/tiramisu.jpg"
 
-     3. DTO для оновлення 
+    # 3. DTO для оновлення 
     DessertUpdate:
       $ref: '#/components/schemas/DessertCreate'
 
-     4. Єдиний формат помилки (ErrorResponse)
+    # 4. Єдиний формат помилки (ErrorResponse)
     ErrorResponse:
       type: object
       properties:
