@@ -11,7 +11,14 @@
 
 **DessertBakery** створено для комфортного і швидкого вибору улюблених десертів. Головна мета — зробити процес замовлення солодощів максимально зручним.
 
-Моделюється сервіс Dessert Bakery API, який обробляє каталог десертів, корзину та замовлення. У Kubernetes цей сервіс розміщений у namespace dessert.
-Користувач заходить на домен dessert-bakery.com, запит проходить через DNS → Load Balancer → Ingress, який маршрутизує шлях /api до Service dessert-api. Service рівномірно розподіляє трафік між Pod-ами (2 репліки) для відмовостійкості. Код зберігається у GitHub, де CI/CD збирає Docker-образ і пушить у GitHub Container Registry; Kubernetes Deployment завантажує цей образ і створює Pod-и.
+---
+
+**Моделюється сервіс** Dessert Bakery API, який обробляє каталог десертів, корзину та замовлення.
+
+У Kubernetes цей сервіс розміщений у namespace dessert.
+
+Користувач заходить на домен dessert-bakery.com, запит проходить через DNS → Load Balancer → Ingress, який маршрутизує шлях /api до Service dessert-api. 
+
+Service рівномірно розподіляє трафік між Pod-ами (2 репліки) для відмовостійкості. Код зберігається у GitHub, де CI/CD збирає Docker-образ і пушить у GitHub Container Registry; Kubernetes Deployment завантажує цей образ і створює Pod-и.
 
 
